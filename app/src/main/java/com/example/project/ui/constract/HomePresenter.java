@@ -12,7 +12,6 @@ public class HomePresenter implements  HomeConstract.IPresenter{
     private HomeConstract.IView mView;
 
     public HomePresenter(Context context){
-        DatabaseDao.init((new DatabaseSQlite(context)));
     }
     @Override
     public void setView(HomeConstract.IView view) {

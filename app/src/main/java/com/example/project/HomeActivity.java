@@ -1,7 +1,5 @@
 package com.example.project;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
@@ -9,6 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
 
+import com.example.project.base.BaseActivity;
 import com.example.project.data.DatabaseDao;
 import com.example.project.data.DatabaseSQlite;
 import com.example.project.data.dao.CategoryDao;
@@ -17,7 +16,7 @@ import com.example.project.data.model.Category;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class HomeActivity extends BaseActivity {
     RecyclerView rc;
     List<String> studentName = new ArrayList<>();
     private Button btn;
@@ -30,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         btn = findViewById(R.id.btn_register);
     }
     private void nextActivity(){
-        Intent intent = new Intent(MainActivity.this, RegisterActivity.class );
+        Intent intent = new Intent(HomeActivity.this, RegisterActivity.class );
         startActivity(intent);
     }
 
